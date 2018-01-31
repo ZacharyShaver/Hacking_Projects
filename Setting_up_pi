@@ -1,0 +1,63 @@
+Settingn up the pi
+
+Install
+
+-There is a premade retropi program which you can use or you can set it up yourself 
+-Here is the link to the retro pi image i used 
+https://retropie.org.uk/download/#Pre-made_images_for_the_Raspberry_Pi
+-If you are on a windows machine you can use SD Associations SD formatter to format the sd card for holding the iso
+https://www.sdcard.org/downloads/formatter_4/
+-This part is pretty easy and theres alot of guides online 
+-Basically just format the sd card and then store the image on it
+-Install snash rom 
+-Put it onto a flash drive you need a .n64 rom 
+-https://romsmania.com/roms/nintendo-64/super-smash-bros-233478 (sketcy site)
+-download and put it on a flash
+
+Setup
+
+-Once the image is on the disk you can plug in your device 
+    Things to plug in
+      -SD card
+      -HDMI cable
+      -power source (im using a power supply that came with  my pi kit, literlly a phone charger with a block will do it)
+      -Display, everyone and their grandma has some sort of hdmi monitor. 
+      -TV, computer monitor, some tablets, projectors, you can even use your laptop as a dedicated display
+      -you can just plug it into yoiur tv and use it as basically an all and one retro system
+    
+    Overclock
+        -n64 roms will not work very well without an overclock 
+        -https://github.com/RetroPie/RetroPie-Setup/wiki/Optimization-for-Nintendo-64 (setting i used)
+        -these work well with some lag but never at important times 
+        -it seems to lag with partocle effects and in the character select screen
+        -literly unplayable without an overclock
+        -put that fan on full blast and stick your pi right in front of it because she gets toasty
+    
+    Startup and install
+       -plug in the SD card and it sould start and install itself 
+       -super easy
+       
+    Installing roms 
+        -https://github.com/retropie/retropie-setup/wiki/Transferring-Roms
+        
+    Controllers
+        -plug in controllers before it is on and it should detect controllers 
+        -fron this point it will allow you to set up controllers
+        -set them up how you like
+        
+        
+Playing 
+
+sure is fun right?
+wait a minute you have discovered a new problem 
+your roomate seems to be a undercover smash god and your smash trash?
+heres where the fun starts
+
+    Solution
+       -you have two options here 
+       1. get good and learn the skill of playing a video game 
+       2. cheat and learn about hacking roms 
+       
+       option 2 sounds good
+       
+       next step is to start research
