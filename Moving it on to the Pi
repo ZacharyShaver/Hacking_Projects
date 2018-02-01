@@ -9,3 +9,20 @@ Control Evniorment - Before i go through the pain of trying to write it on the p
       -raspberry pi's have amd x86 processors and virtualbox runs x64 
       -this may also mess with memory addresses so lets go to the pi and see what i can do 
       -for this im going to need an eithernet connection
+      
+      -im going to ssh in
+        -here is where it gets painful
+          -after adding the mac address to the list of accounts on the wifi i opened an ssh
+          -the user is set to pi@theip
+          -putty since im on my windows machine at the moment 
+          -remember to set up a password it doesnt have one for default 
+          -im in 
+              -first get apt-get working 
+              -https://www.raspberrypi.org/forums/viewtopic.php?t=17016&start=25
+              -this is what i did 
+              -remember a is append in old vi
+              
+           
+              -memory hacking software is scanmem
+              -apt-get update for good luck
+              -sudo apt-get install scanmem
