@@ -2,3 +2,10 @@ The goal is to basically write a program at the touch of a button that can provi
 
 i need to find if the hex values stay the same on restart and if they change when switched over to the pi
   -47E93A8C the golden ticket this is the only one i need to edit 
+
+Control Evniorment - Before i go through the pain of trying to write it on the pi im just going to do it in a vm with the same image 
+  -remember that retro pie is actually just an emulator running on raspian which is a flavor of debian
+  -found out this will not work because a few things
+      -raspberry pi's have amd x86 processors and virtualbox runs x64 
+      -this may also mess with memory addresses so lets go to the pi and see what i can do 
+      -for this im going to need an eithernet connection
