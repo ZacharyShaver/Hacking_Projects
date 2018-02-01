@@ -40,5 +40,184 @@ Where to start research
               -Retro pi uses mupen 64 plus
        -once set up 
             ![alt text](https://github.com/ZacharyShaver/Hacking_Projects/blob/master/smash_screenshot.PNG)
+            
+        -start MHS.exe
+        -file open projects 
+        -select MHS.exe
+        
+        Start up a game so you  can find those sweet hexes
+            -X is a C is b Enter is start
+            -select two player play stock with lots of rounds for testing 
+            -select pikachu or your favorite character and your oponets favorite character
+            -hyrule works well because its so big
+          
+          Memory Lookup
+            -first im going to look for the hex values of the enemy health
+            -to do this youre going to need to have the enemy's hesalth at a searchable value 
+            -so zero might not be the best or even something really common like 4
+            -i her until she was at 33% which seems like a number that wouldnt show up often 
+            -click out of the game before she can do anything more to you ignore that 32% i have 
+            -also good to not get a value thats the same as yours
+            
+            The lookup
+            select that small window titled Found Addresses 
+                - it will have a little magnifing box on it click the single one 
+                
+                -Select the value to find as your enemy health
+          
+                -ok so im guessing you have an over whelming number of hexes that match that, thats okay
+                
+                -next thing youre going to want to do is to narrow down the search 
+                -since these addressses remain saved in your found addresses window you can change one of these values and search one
+                    of them if you change a value right?
+                -lets see go beat up sammus
+                
+                -so i got a new value for her health 83 which is a pretty odd number so that will narrow down the search 
+                -ignore how she killed me as you can see im not good at smash
+                
+                -lets preform a second lookup on sammuses health
+                -it is the second one with the two magnifing glasses
+                
+                -one value poped up i got very lucky usually it will not be narrowed down this easy so continue the process
+                -right click and add selected from here you can confirm if this address is the one youre looking for 
+                -preform again if you wan to be sure but i think this is pretty conclusive so im going to try and modify the value and see
+                        what happens 
+                 left click in the big square window on the value and go to hex editor 
+                    -a bunch of values probaly just showed up for you and you are most likely confused as was i
+                    
+                    -so remember the value i found was 047A2024 yours may be different im actually about to research this after i conplete this
+                    -in this table you can use the rows and columns to find the exact value 
+                    -google a decimal to hex table for refrence
+                    -from this table i discovered that the value 99 in hex is 63
+                    
+                ok cool so its right there 
+                       -just go to your table and find a hex value with all the numbers and values of the hex for the health value
+                            besides the last one which will be a zero
+                       -would you look at that a 63
+                       -alright im going to try and edit this value and see what happens 
+                       -now if you look at your hex table you can chose any value i chose my favorite number 7E which is 126
+                        -double click on it and type in your hex and press enter 
+                        -close hex editer and lets see
+                        -hmm the health doesnt seem to have changed lets see what haoppens if i hit her
+                        -nothing happened 
+                        
+                        -from this i can conclude that i need to preform another search 
+                        -what doesnt make sense 
+                            -shouldnt there be two values one for the health she actually has and one of the health to display graphically
+                     
+                        -try again but this time i dont want to die because i am not sure if thaat has an effect on the way things are stored
+                        -got her to 81% begin the search 
+                        -alright now to 94 to narrow it down
+                        -thats weird that same hex keeps showing up
+                            -what could this mean 
+                                -its probaly associated with the health some how?
+                                -im going to start a new game and go about it in a more controlled way
+                                
+                    How to make it a more controlled setting 
+                            -set game up like a standard game 
+                            -standard game for me entails two player stock 5 
+                            -two player doesnt seem to be detecting any other players
+                            -change settings in the emulator?
+                                -this can be done in the options of Project 64 
+                                -easier to control and replicate conditions
+                    Controlled enviorment set up
+                        -uppon setting up a controlled enviorment and replicating conditions i noticed two things
+                            1.the hex value 047A2024 (one used last time that didnt seem to do anthing) has reappeared
+                                -whats this mean 
+                                    -hex vales dont change on restart or change of game although the characters are the same 
+                                    -a reliable hack can be made from this because the value doesnt have to be relocated every restart
+                            2. a new hex showed up 09F3919
+                                Lets test and see what editing this one does 
+                                    -changed the value to 7F this one doesnt seem to be doing anthing and even after the value was changed
+                                        it stayed the same 
+                                        
+                     Back to 047A2024
+                        -What is it?
+                            -changing the value doesnt seem to have an effect wile the value does change when changedin game?
+                        -try looking for pikachus health 
+                            -interesting when you look for it i get that same 047A2024 value which is weird 
+                        -what is this value doing?
+                            -it shows up with both characters and seems to change based on their health 
+                        -what happens if i search for a completly random value and subsearch that random value?
+                        
+                        Would you look at that it finds the value i just searched for 
+                            -what exactly this value is doing i have no idea but i can tell from deducing that this is not the value for the 
+                                health 
+                         
+                        Whot now?
+                            -i will reset the hex editing software since multiple times ive closed and opened the emulator 
+                            -it uses a process id so its probably a different thing than the emulator
+                            -would you doot that tooter it worked i caused it to bug out by restarting 
+                            
+                Attemot 2:
+                    alright time to retry the process and throw out everything i learned before
+                        -i found these three values when searching the hexes 
+                           -all three change based on the value of player2 health 
+                            -3FE64DE8
+                                -when i change?
+                                    -the health on the screen imedietly changes !!!!!!!!!!!!!
+                                    -the 04 hex is also changed which is interesting 
+                                    -what about of i hit them will the health stay?
+                                        -it doesnt at all actuall it caused the game to crash that interesting 
+                                        -reset
+                                            -IMPORTANT
+                                                -on restart these values stayed and have the same purposes which shows good signs 
+                                                    that it can be recreated
+                            -3FEF1604
+                                -what happens when i change it
+                                    -nothing 
+                                        -what if i hit them 
+                                        -nevermind the game crashed lets try again
+                                        -ok so now im getting 5 new values at 47
+                                            trying these
+                                                -47CD4D5C
+                                                doesnt do anything but increases with hits
+                                                -47CD4DD4
+                                                same
+                                                -47CD4DD8
+                                                same
+                                                -47CD4DE8
+                                                when changed it causes the health value to chang ebut goes back once they are hit
+                                        -Change all to 0?
+                                           -nope
+                               - a restart has given me my first sucessful results heres what i did
+                                    -these 4 values
+                                    
+                                    
+                                    -i changed each and then preformed an attack
+                                    
+                                    -for example ill change each to 7F
+                                    
+                                    and after i attack
+                                    
+                                    
+     Success 
+        -i have sucessfully found a recreatable change of health on the enemy character 
+            -this has to be done very sneakly and maybe it is not the right thing to edit but the addereess to change to modify the enemies health are
+                47CD4D5C
+                47CD4DD4
+                47CD4DD8
+                47E9E354
+                    -if all modified at once they cause the enemies health to be put to the selected value after they have been hit
+                        -could be used when the enemy is close to death and a small attack could hit like a truck
+                        
+                        
+     What next 
+        -next i will be researching values for attacks 
+            -what i need 
+                -the values for each attack and the values for each attack modifier 
+                -to know if attacks are constant or if they are changed based on the enemies health which i think is the case
+                
+                                
+                            -4002B9FC
+                            
+                        
+                        
+                        
+                        
+                
+                
+                
+            
      
               
