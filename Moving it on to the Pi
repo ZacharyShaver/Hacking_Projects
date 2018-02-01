@@ -1,0 +1,4 @@
+The goal is to basically write a program at the touch of a button that can provide huge chunks to the second player
+
+i need to find if the hex values stay the same on restart and if they change when switched over to the pi
+  -47E93A8C the golden ticket this is the only one i need to edit 
