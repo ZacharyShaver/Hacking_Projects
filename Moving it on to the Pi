@@ -19,10 +19,61 @@ Control Evniorment - Before i go through the pain of trying to write it on the p
           -im in 
               -first get apt-get working 
               -https://www.raspberrypi.org/forums/viewtopic.php?t=17016&start=25
-              -this is what i did 
+              -this i tried and it didnt seem to work i need to identify the actual issue instead of guessing and messing with things
+              -https://retropie.org.uk/forum/topic/9212/dependencies-problem-apt-get-not-working
+              -same problem as me 
+              -apt-get update
+              Get:1 http://mirrordirector.raspbian.org jessie InRelease [120 B]
+              99% [1 InRelease gpgv 166 kB]Splitting up /var/lib/apt/lists/partial/mirrordirector.raspbian.org_raspbian_Err http://mirrordirector.raspbian.org jessie InRelease
+
+              Fetched 166 kB in 1s (148 kB/s)
+              Reading package lists... Done
+               W: Size of file /var/lib/apt/lists/partial/mirrordirector.raspbian.org_raspbian_dists_jessie_InRelease is not what the server reported 165996 120
+               
+               W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://mirrordirector.raspbian.org jessie InRelease: Clearsigned file isn't valid, got 'NODATA' (does the network require authentication?)
+
+               W: Failed to fetch http://mirrordirector.raspbian.org/raspbian/dists/jessie/InRelease
+
+               W: Some index files failed to download. They have been ignored, or old ones used instead.
+                    -whats this mean 
+                        -impiortant error occured durring signature version 
+                        -this means that the signature version 
+               
+              -apt-get upgrade
+              -apt-get dist-upgrade
+              
+              -this is probably an issue with the ethernet due to the fact that it says it needs signature verification and this 
+               network requires a username and password to register the mac address for it to work on the system which i thought i
+               did already?
+               -many fourms say its a dns problem
+               -sudo nano /etc/apt/sources.list
+               -problem it has a weird running version of vi on it but nano works fine so i will use nano
+               -comment out #deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi
+               -apt-get update
+               -ok so i reset the address on website and im guessing i just entered the mac address wrong
+               
+               -try again after comment is removed
+               
+
+                
+               
+              
               -remember a is append in old vi
               
            
               -memory hacking software is scanmem
               -apt-get update for good luck
               -sudo apt-get install scanmem
+              -AND IT WORKED
+              
+              
+              -games up and running 
+              
+      -now i learn to use scanmem
+      find the process id of the emulator 
+              -ps aux | grep retropie
+              -result listing /n64/Super Smash Bros 
+              -1373
+              -so i set up a game and beat kirby to 31 health 
+              -now i search 31*8 so i get the propper value = 248
+              -
