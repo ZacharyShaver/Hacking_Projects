@@ -76,4 +76,17 @@ Control Evniorment - Before i go through the pain of trying to write it on the p
               -1373
               -so i set up a game and beat kirby to 31 health 
               -now i search 31*8 so i get the propper value = 248
-              -
+              -the search takes a minute because there is so many values to search adnthe pi is painfully slow
+              -it will also pause the gaem which means that this cant really be used as a cheat but for science i want to change it
+              -84407 mateches 
+              -hit kirby to 33*=264
+              -nothing so i will be taking out the *8 and seing if that works
+              -1699488 results
+              -hes at 35 now
+              -73 matches looks promising 
+              -4 matches
+              -it contines to be 4 matches and from my research i discovered that there are 4 values holding health so this look slike its it
+              -it worked !!!!
+              -heres a video of it 
+              
+              
